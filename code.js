@@ -1,4 +1,6 @@
+//used replit AI tool to help where marked
 function findSortedPermutation(arr, currPos, permutations) {
+    //my original counted wrong, the following line was changed to help
     if (currPos === arr.length - 1) {
         permutations.count++;
         return isSorted(arr); 
@@ -27,7 +29,7 @@ function isSorted(arr) {
     }
     return true; 
 }
-
+//the logic in this function also needed some revision to pass the checks
 function permutationSort(arr) {
     const permutations = { count: 0 }; 
     findSortedPermutation(arr, 0, permutations);
