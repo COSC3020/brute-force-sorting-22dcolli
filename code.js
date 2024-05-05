@@ -1,41 +1,41 @@
 // Used replit AI tool on one logic issue marked below
-function findSortedPermutation(arr, currPos, permutations) {
+function findSortedPermutation(a, currPos, permutations) {
     //this if loop had problem innitially
-    if (currPos === arr.length - 1) {
-      //console.log("array", arr); 
-      return isSorted(arr); 
+    if (currPos === a.length - 1) {
+      //console.log("array", a); 
+      return isSorted(a); 
     }
     //needed help with the logic inside this loop too
-    for (let i = currPos; i < arr.length; i++) {
-      swap(arr, i, currPos); 
+    for (let i = currPos; i < a.length; i++) {
+      swap(a, i, currPos); 
       permutations.count++;
-      if (findSortedPermutation(arr, currPos + 1, permutations)) {
+      if (findSortedPermutation(a, currPos + 1, permutations)) {
         return true; 
       }
-      swap(arr, currPos, i);
+      swap(a, currPos, i);
     }
     return false; 
   }
 
-  function swap(arr, first, second) {
-    const tmp = arr[first];
-    arr[first] = arr[second];
-    arr[second] = tmp;
+  function swap(a, first, second) {
+    const tmp = a[first];
+    a[first] = a[second];
+    a[second] = tmp;
   }
   
   
-  function isSorted(arr) {
-    for (let i = 0; i < arr.length - 1; i++) {
-      if (arr[i] > arr[i + 1]) {
+  function isSorted(a) {
+    for (let i = 0; i < a.length - 1; i++) {
+      if (a[i] > a[i + 1]) {
         return false; 
       }
     }
     return true; 
   }
   
-  function permutationSort(arr) {
+  function permutationSort(a) {
     const permutations = { count: 0 }; 
-    findSortedPermutation(arr, 0, permutations);
+    findSortedPermutation(a, 0, permutations);
     //console.log("tried:", permutations.count);
   }
   
