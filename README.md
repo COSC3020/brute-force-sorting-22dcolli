@@ -22,6 +22,8 @@ randomly without memory instead of systematically trying them?
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
 
+Note: I consulted Ishita Patel on how to best adress the feedback given
+
 Answer:
 
 Best Case:I believe that logically the best case scenario would be if the given array happened to be in the correct order already, then the algorithm would just have to go through and check one time, which would have the runtime in the best case be $\Theta(n)$.
