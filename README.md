@@ -26,6 +26,6 @@ Answer:
 
 Best Case:I believe that logically the best case scenario would be if the given array happened to be in the correct order already, then the algorithm would just have to go through and check one time, which would have the runtime in the best case be $\Theta(n)$.
 
-Worst Case:I think the worst case would be if the program had to generate every single possible variation of the given array to find the correct one, this would make the runtime infinite though, because there is an equally as likely chance that there is no correct permutation that can occur.
+Worst Case:I think the worst case would be if the program had to generate every single possible variation of the given array to find the correct one, we observe that with every new element that is in our array, the possible permutations increases by another factor. I believe that this would mean the complexity would then be factorial because for say an array of 5 elements there are different combinations of those 5 elements, or put more simply $5!$. This lead me to the conclusion the complexity would be $\Theta(n!)$
 
 Random: I believe that the complexity would also be infinite if the permutations happened randomly, because statistically it is possible for the correct permutation to simply never appear.
